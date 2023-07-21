@@ -11,16 +11,18 @@ const Navbar = () => {
   return (
     <div className="w-full bg-purple-600 flex p-4 gap-16">
       {/* Navigation Logo Container */}
-      <div className="logoContainer flex align-middle items-center gap-2 text-white font-bold text-lg mx-12">
-        <Image
-          src="/assets/logo.png"
-          alt="unavailable"
-          width={50}
-          height={50}
-          style={{ borderRadius: "10%" }}
-        />
-        OnlineStore
-      </div>
+      <Link href={"/"}>
+        <div className="logoContainer flex align-middle items-center gap-2 text-white font-bold text-lg mx-12">
+          <Image
+            src="/assets/logo.png"
+            alt="unavailable"
+            width={50}
+            height={50}
+            style={{ borderRadius: "10%" }}
+          />
+          OnlineStore
+        </div>
+      </Link>
       {/* Navigation links */}
       <ul className="navItems flex list-none gap-6 text-white text-sm font-bold items-center">
         <li className="hover:underline decoration-2 transition-all hover:text-yellow-400">
@@ -28,7 +30,7 @@ const Navbar = () => {
         </li>
 
         <li className="hover:underline decoration-2 grow transition-all hover:text-yellow-400">
-          <Link href="./products">View All Products</Link>
+          <Link href="/products">View All Products</Link>
         </li>
       </ul>
       {/* Search Bar */}
