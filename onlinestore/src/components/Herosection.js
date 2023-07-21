@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-
+import { useRouter } from "next/router";
 const Herosection = () => {
   return (
     <section className="grid max-w-screen-xl px-4 py-8 mx-auto lg:grid-cols-2 gap-10 content-end w-fit bg--300 grid-rows-2 grid-cols-1">
