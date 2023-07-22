@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 const Herosection = () => {
   return (
-    <section className="grid max-w-screen-xl px-4 py-8 mx-auto lg:grid-cols-2 gap-10 content-end w-fit bg--300 grid-rows-2 grid-cols-1">
+    <section className="grid max-w-screen-xl px-4 py-8 mx-auto lg:grid-cols-2 gap-10 content-end w-fit  grid-cols-1">
       {/* left section */}
       <div className="left mr-auto flex flex-col gap-4 justify-center ">
         <h1 className="mb-4 mt-10 text-6xl text-center font-extrabold ">

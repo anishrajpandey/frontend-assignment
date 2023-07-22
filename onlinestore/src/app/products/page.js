@@ -16,7 +16,7 @@ const page = () => {
 
   const searchParams = useSearchParams();
   let query = searchParams.get("search");
-  // console.log(query);
+
   if (query) {
     filteredProducts = products?.filter(
       (product) => product.title.toLowerCase().includes(query.toLowerCase()) //for case insensivity
@@ -26,7 +26,7 @@ const page = () => {
   console.log(products);
 
   return (
-    <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 px-24  py-8 ">
+    <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 px-24 py-8 overflow-x-hidden ">
       {queryClient.isLoading && (
         <>
           <LoadingSpinner />
@@ -48,9 +48,9 @@ const page = () => {
             />
           );
         })}
-      {!(products === [] || products === undefined) && (
-        <div className="h-screen w-screen flex flex-col justify center">
-          <h1 className="text-2xl text-red-700 text-center">
+      {products && !products[0] && (
+        <div className="h-screen w-screen flex flex-col items-center">
+          <h1 className="text-md md:text-xl  text-red-700 text-center">
             No Products Found!! Try changing your keyword or
           </h1>
           <Link href="/products" className="flex justify-center">

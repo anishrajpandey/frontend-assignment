@@ -9,7 +9,7 @@ const Navbar = () => {
     setQuery(e.target.value);
   };
   return (
-    <div className="w-full bg-purple-600 flex p-4 gap-16">
+    <div className="w-full bg-purple-600 flex p-4 gap-16 max flex-col align-center sm:flex-row">
       {/* Navigation Logo Container */}
       <Link href={"/"}>
         <div className="logoContainer flex align-middle items-center gap-2 text-white font-bold text-lg mx-12">
@@ -29,8 +29,10 @@ const Navbar = () => {
           <Link href="/">Home</Link>
         </li>
 
-        <li className="hover:underline decoration-2 grow transition-all hover:text-yellow-400">
-          <Link href="/products">View All Products</Link>
+        <li className="hover:underline decoration-2 w-32 transition-all hover:text-yellow-400">
+          <Link href="/products" className="w-fit block">
+            View All Products
+          </Link>
         </li>
       </ul>
       {/* Search Bar */}
@@ -40,7 +42,7 @@ const Navbar = () => {
           type="search"
           onChange={handleInputChange}
           id="search"
-          className="block ml-auto self-end w-1/2 p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
+          className="block ml-auto self-end max-w-40 p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
           placeholder="Search Tshirts, Smartphones..."
         />
         {/* search icon

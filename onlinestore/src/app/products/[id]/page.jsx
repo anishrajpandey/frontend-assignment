@@ -33,13 +33,12 @@ const page = () => {
     );
   return (
     <>
-      :
       <Link href={"/products"}>
         <h1 className="text-4xl cursor-pointer w-20 h-20 absolute text-white aspect-auto rounded-full bg-violet-400 flex justify-center items-center m-5">
           X
         </h1>{" "}
       </Link>
-      <section className="flex min-h-screen">
+      <section className="flex min-h-screen flex-col md:flex-row">
         <div className="left flex-1">
           <div className="imgContainer object-contain flex justify-center items-center h-full ">
             <Image src={info.data.image} width={300} height={200} />
