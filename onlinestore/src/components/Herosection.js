@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { useRouter } from "next/router";
 const Herosection = () => {
   return (
     <section className="grid max-w-screen-xl px-4 py-8 mx-auto lg:grid-cols-2 gap-10 content-end w-fit bg--300 grid-rows-2 grid-cols-1">
@@ -33,12 +32,6 @@ const Herosection = () => {
               clip-rule="evenodd"
             ></path>
           </svg>
-        </Link>
-        <Link
-          href="./search"
-          class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 "
-        >
-          Search For Products
         </Link>
       </div>
       {/* right section */}
