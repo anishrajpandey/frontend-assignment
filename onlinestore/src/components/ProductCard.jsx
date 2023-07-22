@@ -43,14 +43,16 @@ const ProductCard = ({
         <div>
           <p className="text-lg font-semibold text-gray-900 mb-0">{title}</p>
           <div className="flex justify-between w-full">
-            <p className="text-md text-gray-800 mt-0">Rs. {price}</p>{" "}
+            <p className="text-md text-gray-800 mt-0 font-semibold">${price}</p>{" "}
             <p className="text-sm italic text-gray-600 font-light mt-0 mx-8 ">
               {category}
             </p>
           </div>
         </div>
       </div>
-      <div className="flex items-center gap-3 mb-1 mr-4 group cursor-pointer">
+      <p className="text-sm text-gray-500 p-2 line-clamp-3 ">{description}</p>
+
+      <div className="flex items-center gap-3 mb-1 pl-3 pt-3 mr-4 group cursor-pointer">
         <button className="bg-orange-400 h-10 grid items-center rounded-md w-full text-white hover:bg-orange-700 transition-all ">
           {" "}
           Buy Now
@@ -70,7 +72,6 @@ const ProductCard = ({
           />
         </svg>
       </div>
-      <p className="text-sm text-gray-500 p-2 line-clamp-3">{description}</p>
       <div className="ratings p-3">
         <span className="text-2xl p-3 h-4">{getStarsFromRatings(rate)}</span>
         <span className="text-md p-3 h-4">({count})</span>

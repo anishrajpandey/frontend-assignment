@@ -2,7 +2,7 @@
 import ProductCard from "@/components/ProductCard";
 import { useQueryClient, useQuery } from "@tanstack/react-query";
 import { useSearchParams } from "next/navigation";
-
+import LoadingSpinner from "./../../components/LoadingSpinner";
 const page = () => {
   let filteredProducts;
   //fetching data from api with React Query
@@ -17,17 +17,21 @@ const page = () => {
   let query = searchParams.get("search");
   console.log(query);
   if (query) {
-    filteredProducts = products?.filter((product) =>
-      product.title.toLowerCase().includes(query.toLowerCase())
+    filteredProducts = products?.filter(
+      (product) => product.title.toLowerCase().includes(query.toLowerCase()) //for case insensivity
     );
   }
   if (filteredProducts) products = filteredProducts;
-  // console.log(filteredProducts, products);
   return (
     <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 px-24  py-8 ">
       {queryClient.isLoading && (
+        <>
+          <LoadingSpinner />
+        </>
+      )}
+      {queryClient.isError && (
         <h1 className="w-screen h-screen p-0 m-0 flex justify-center items-center text-5xl font-semibold">
-          LOADING...
+          Error 😔...
         </h1>
       )}
       {products &&
