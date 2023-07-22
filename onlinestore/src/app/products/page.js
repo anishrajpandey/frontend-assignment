@@ -4,6 +4,7 @@ import { useQueryClient, useQuery } from "@tanstack/react-query";
 import { useSearchParams } from "next/navigation";
 import LoadingSpinner from "./../../components/LoadingSpinner";
 import Link from "next/link";
+import { useState } from "react";
 const page = () => {
   let filteredProducts;
   //fetching data from api with React Query
