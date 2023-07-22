@@ -37,6 +37,7 @@ const ProductCard = ({
           height={40}
           width={330}
           src={image}
+          alt="image not available"
         />
       </div>
       <div className="mt-4 pl-2 mb-2 flex justify-between ">
