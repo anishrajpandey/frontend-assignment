@@ -40,7 +40,7 @@ const Navbar = () => {
           type="search"
           onChange={handleInputChange}
           id="search"
-          class="block ml-auto self-end w-1/2 p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
+          className="block ml-auto self-end w-1/2 p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
           placeholder="Search Tshirts, Smartphones..."
         />
         {/* search icon
@@ -53,7 +53,7 @@ const Navbar = () => {
           className="w-12 h-12 hover:bg-black rounded-lg flex justify-center items-center border-yellow-300 border hover:bg-transparent transition-all"
         >
           <svg
-            class="w-8 h-8 text-white "
+            className="w-8 h-8 text-white "
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

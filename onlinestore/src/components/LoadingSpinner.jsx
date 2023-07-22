@@ -6,7 +6,7 @@ const loading = () => {
       {/* <div className="h-fit flex justify-center items-center flex-col"> */}
       <svg
         aria-hidden="true"
-        class=" w-20 h-fit text-gray-200 animate-spin fill-blue-600"
+        className=" w-20 h-fit text-gray-200 animate-spin fill-blue-600"
         viewBox="0 0 100 101"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

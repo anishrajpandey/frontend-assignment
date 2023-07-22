@@ -3,6 +3,7 @@ import ProductCard from "@/components/ProductCard";
 import { useQueryClient, useQuery } from "@tanstack/react-query";
 import { useSearchParams } from "next/navigation";
 import LoadingSpinner from "./../../components/LoadingSpinner";
+import Link from "next/link";
 const page = () => {
   let filteredProducts;
   //fetching data from api with React Query
@@ -15,13 +16,15 @@ const page = () => {
 
   const searchParams = useSearchParams();
   let query = searchParams.get("search");
-  console.log(query);
+  // console.log(query);
   if (query) {
     filteredProducts = products?.filter(
       (product) => product.title.toLowerCase().includes(query.toLowerCase()) //for case insensivity
     );
   }
   if (filteredProducts) products = filteredProducts;
+  console.log(products);
+
   return (
     <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 px-24  py-8 ">
       {queryClient.isLoading && (
@@ -35,7 +38,7 @@ const page = () => {
         </h1>
       )}
       {products &&
-        products.map((product) => {
+        products?.map((product) => {
           return (
             <ProductCard
               key={product.id}
@@ -45,6 +48,18 @@ const page = () => {
             />
           );
         })}
+      {!(products === [] || products === undefined) && (
+        <div className="h-screen w-screen flex flex-col justify center">
+          <h1 className="text-2xl text-red-700 text-center">
+            No Products Found!! Try changing your keyword or
+          </h1>
+          <Link href="/products" className="flex justify-center">
+            <button className="w-40 h-16 rounded-lg mx-auto bg-purple-600 m-6 text-white">
+              Clear Your Search
+            </button>
+          </Link>
+        </div>
+      )}
     </div>
   );
 };

@@ -6,10 +6,10 @@ const Herosection = () => {
     <section className="grid max-w-screen-xl px-4 py-8 mx-auto lg:grid-cols-2 gap-10 content-end w-fit bg--300 grid-rows-2 grid-cols-1">
       {/* left section */}
       <div className="left mr-auto flex flex-col gap-4 justify-center ">
-        <h1 class="mb-4 mt-10 text-6xl text-center font-extrabold ">
+        <h1 className="mb-4 mt-10 text-6xl text-center font-extrabold ">
           Online Store
         </h1>
-        <p class="mb-6 font-light text-gray-500 md:text-lg lg:text-xl">
+        <p className="mb-6 font-light text-gray-500 md:text-lg lg:text-xl">
           Welcome to our online store! We offer a wide variety of products at
           competitive prices. Our products are sourced from all over the world,
           so you can be sure to find what you're looking for.We hope you enjoy
@@ -17,11 +17,11 @@ const Herosection = () => {
         </p>
         <Link
           href="./products"
-          class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center rounded-lg bg-violet-900 text-white hover:bg-violet-600 transition-all "
+          className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center rounded-lg bg-violet-900 text-white hover:bg-violet-600 transition-all "
         >
           Browse Products
           <svg
-            class="w-5 h-5 ml-2 -mr-1"
+            className="w-5 h-5 ml-2 -mr-1"
             fill="currentColor"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
@@ -35,7 +35,7 @@ const Herosection = () => {
         </Link>
       </div>
       {/* right section */}
-      <div class="right  lg:mt-0 justify-center flex">
+      <div className="right  lg:mt-0 justify-center flex">
         <Image
           src="/assets/shopping.png"
           width={400}

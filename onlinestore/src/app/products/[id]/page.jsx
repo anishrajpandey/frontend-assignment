@@ -46,7 +46,7 @@ const page = () => {
           </div>
         </div>
         <div className="right flex-1 flex flex-col">
-          <h1 class="mb-4 mt-14 text-3xl text-center px-4 font-semibold ">
+          <h1 className="mb-4 mt-14 text-3xl text-center px-4 font-semibold ">
             {info.data.title}
           </h1>
           <p className="text-md text-gray-500 p-2 ">{info.data.description}</p>
