@@ -23,7 +23,21 @@ const page = () => {
     }
     return Stars;
   };
+  // for cart
+  function handleCartClick(title, price, image) {
+    let initialCart;
+    if (localStorage.getItem("storecart")) {
+      initialCart = JSON.parse(localStorage.getItem("storecart"))?.items || [];
+    }
 
+    console.log(initialCart);
+    initialCart?.push({
+      title,
+      price,
+      image,
+    });
+    localStorage.setItem("storecart", JSON.stringify({ items: initialCart }));
+  }
   if (info.isLoading) return <LoadingSpinner />;
   if (info.isError)
     return (
@@ -69,6 +83,13 @@ const page = () => {
               Buy Now
             </button>
             <svg
+              onClick={() => {
+                handleCartClick(
+                  info.data.title,
+                  info.data.price,
+                  info.data.image
+                );
+              }}
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6 group-hover:opacity-50 opacity-70"
               fill="none"
@@ -76,7 +97,7 @@ const page = () => {
               stroke="black"
             >
               <path
-                stroke-linecap="round"
+                strokeLinecap="round"
                 stroke-linejoin="round"
                 stroke-width="1.5"
                 d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"

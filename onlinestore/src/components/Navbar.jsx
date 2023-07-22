@@ -41,6 +41,11 @@ const Navbar = () => {
             View All Products
           </Link>
         </li>
+        <li className="hover:underline decoration-2 w-32 transition-all hover:text-yellow-400">
+          <Link href="/cart" className="w-fit block">
+            Your Cart
+          </Link>
+        </li>
       </ul>
       {/* Search Bar */}
 
@@ -72,7 +77,7 @@ const Navbar = () => {
             >
               <path
                 stroke="currentColor"
-                stroke-linecap="round"
+                strokeLinecap="round"
                 stroke-linejoin="round"
                 stroke-width="3"
                 d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
