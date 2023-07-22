@@ -1,11 +1,10 @@
 ## Getting Started
 
 ## Technologies Used
-
-React
-Next JS 13
-Tailwind CSS
-React Query
+## React
+## Next JS 13
+## Tailwind CSS
+## React Query
 
 To run the project locally
 First download the repo. Go to onlinestore folder in terminal and:
