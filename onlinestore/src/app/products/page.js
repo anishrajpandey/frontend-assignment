@@ -12,9 +12,9 @@ const page = () => {
     fetch("https://fakestoreapi.com/products").then((r) => r.json())
   );
   const queryReceiver = useQueryClient();
-  let products = queryReceiver.getQueryData(["products"]);
+  // let products = queryReceiver.getQueryData(["products"]);
   //accessing the query
-
+  let products = queryClient.data;
   const searchParams = useSearchParams();
   let query = searchParams.get("search");
 
@@ -25,7 +25,6 @@ const page = () => {
   }
   console.log(query, filteredProducts, products);
   if (filteredProducts) products = filteredProducts;
-  console.log(products);
 
   return (
     <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 px-24 py-8 overflow-x-hidden ">
