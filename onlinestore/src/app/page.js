@@ -5,7 +5,7 @@ import React from "react";
 import ProductCard from "@/components/ProductCard";
 import { useQueryClient, useQuery } from "@tanstack/react-query";
 
-import LoadingSpinner from "./../components/LoadingSpinner";
+import LoadingSpinner from "../components/LoadingSpinner";
 
 const page = () => {
   return (
